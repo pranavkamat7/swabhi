@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>European Marvels with Swabhi | 12 Nights, 13 Days, 6 Countries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #f7f1ea;
+      --paper: #fffdfa;
+      --paper-2: #fff8f3;
+      --dark: #0f0c09;
+      --ink: #191613;
+      --muted: #6d635c;
+      --faint: #a99f97;
+      --line: rgba(25, 22, 19, .08);
+      --line-med: rgba(25, 22, 19, .13);
+      --rose: #bf7658;
+      --rose-dark: #a55e40;
+      --rose-soft: #f5e4db;
+      --gold: #c6a14f;
+      --gold-soft: #f7efdc;
+      --olive: #7d7a65;
+      --radius: 22px;
+      --radius-lg: 30px;
+      --max: 1180px;
+      --text-max: 820px;
+      --shadow: 0 10px 35px rgba(15, 12, 9, .07);
+      --shadow-lg: 0 24px 70px rgba(15, 12, 9, .12);
+      --shadow-xl: 0 35px 100px rgba(15, 12, 9, .16);
+    }
+
+    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,.75), transparent 30%),
+        linear-gradient(180deg, #fbf7f1 0%, #f6efe7 100%);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    h1,h2,h3 { font-family: 'DM Serif Display', serif; line-height: 1.04; letter-spacing: -0.02em; }
+    .wrap { width: min(100% - 28px, var(--max)); margin: 0 auto; }
+    .text-wrap { width: min(100%, var(--text-max)); margin-left: auto; margin-right: auto; }
+    .section { padding: 10px 0; }
+    main { padding: 6px 0 130px; overflow-x: hidden; }
+
+    /* sticky bar */
+    .sticky-bar {
+      position: fixed; left: 14px; right: 14px; bottom: 14px; z-index: 300;
+      padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 14px;
+      border: 1px solid rgba(255,255,255,.24);
+      background: rgba(255,252,248,.82);
+      backdrop-filter: blur(20px) saturate(1.2);
+      -webkit-backdrop-filter: blur(20px) saturate(1.2);
+      border-radius: 20px;
+      box-shadow: 0 15px 50px rgba(15,12,9,.14);
+      transform: translateY(130%);
+      transition: transform .45s cubic-bezier(.16,1,.3,1);
+    }
+    .sticky-bar.visible { transform: translateY(0); }
+    .sticky-left { min-width: 0; flex: 1; }
+    .sticky-price { font-family: 'DM Serif Display', serif; font-size: 24px; line-height: 1; color: var(--ink); margin-bottom: 3px; }
+    .sticky-note { font-size: 12px; color: var(--muted); }
+    .sticky-btn {
+      flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center;
+      padding: 13px 20px; border-radius: 14px;
+      background: linear-gradient(180deg, #ca8162 0%, #b56c4f 100%);
+      color: #fff; font-size: 14px; font-weight: 600;
+      box-shadow: 0 12px 28px rgba(191,118,88,.32);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .sticky-btn:hover { transform: translateY(-2px); box-shadow: 0 18px 38px rgba(191,118,88,.42); }
+
+    /* hero */
+    .hero {
+      position: relative; min-height: 100svh; display: flex; align-items: center;
+      overflow: hidden; color: #fff; isolation: isolate;
+    }
+    .hero-media {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(9,8,8,.18) 0%, rgba(9,8,8,.22) 38%, rgba(9,8,8,.72) 82%, rgba(9,8,8,.90) 100%),
+        url('https://www.chaletzeit.com/wp-content/uploads/2021/04/innsbruck-stadt-oesterreich.jpg') center 40%/cover no-repeat;
+      transform: scale(1.02);
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background:
+        radial-gradient(circle at 15% 18%, rgba(255,220,195,.18), transparent 22%),
+        radial-gradient(circle at 82% 15%, rgba(255,255,255,.09), transparent 20%);
+    }
+    .hero::after {
+      content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: .05;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      mix-blend-mode: overlay;
+    }
+    .hero-content { position: relative; z-index: 2; width: 100%; padding: 34px 0 40px; }
+
+    .hero-right-block {
+      position: absolute; top: 30px; right: 50px;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 12px; z-index: 3; width: 360px;
+    }
+    .hero-right-block .hero-glass { width: 100%; margin: 0; }
+
+    .hero-glass {
+      width: min(100%, 480px); border-radius: 28px; padding: 20px;
+      background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(18px) saturate(1.1);
+      -webkit-backdrop-filter: blur(18px) saturate(1.1);
+      box-shadow: 0 18px 60px rgba(0,0,0,.18);
+    }
+    .hero-stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+    .h-stat {
+      min-width: 0; padding: 14px; border-radius: 16px;
+      background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.13);
+      color: #fff; text-align: center;
+    }
+    .h-stat strong { display: block; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.58); margin-bottom: 3px; }
+    .h-stat span { display: block; font-size: 14px; font-weight: 600; line-height: 1.35; }
+
+    .urgency {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 14px; border-radius: 999px;
+      background: rgba(198,161,79,.16); border: 1px solid rgba(198,161,79,.35);
+      color: #f2dc9a; font-size: 12px; font-weight: 600; backdrop-filter: blur(10px);
+    }
+    .urgency-dot { width: 7px; height: 7px; border-radius: 50%; background: #f2dc9a; animation: blink 1.8s ease-in-out infinite; }
+    @keyframes blink { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:.45; transform:scale(.7); } }
+
+    .eyebrow { display: block; margin-bottom: 14px; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.68); }
+    .hero h1 { font-size: clamp(48px, 9vw, 98px); font-weight: 400; max-width: 8ch; margin: 0 0 18px; text-shadow: 0 8px 30px rgba(0,0,0,.25); }
+    .hero h1 em { font-style: italic; color: #f4cfbf; }
+    .hero-lead { max-width: 42ch; font-size: clamp(15px, 2vw, 17px); line-height: 1.75; color: rgba(255,255,255,.88); font-weight: 300; margin-bottom: 26px; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 8px; }
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 17px 28px; border-radius: 16px;
+      background: linear-gradient(180deg, #cb8566 0%, #ff6f31 100%);
+      color: #fff; border: 0; cursor: pointer; font-weight: 600; font-size: 16px;
+      box-shadow: 0 18px 50px rgba(196,122,90,.35);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 24px 58px rgba(196,122,90,.42); }
+    .hero-sub-note { font-size: 13px; color: rgba(255,255,255,.72); }
+    .hero-copy { text-align: left; max-width: 560px; margin: 0; }
+
+    /* photo strip */
+    .strip-wrap { padding: 26px 0 8px; overflow: hidden; }
+    .photo-strip { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 14px; }
+    .strip-photo { position: relative; overflow: hidden; border-radius: 20px; aspect-ratio: 3/4; background: #eae1d8; box-shadow: var(--shadow); }
+    .strip-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+    .strip-photo:hover img { transform: scale(1.05); }
+    .strip-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.55) 100%); }
+    .strip-label { position: absolute; left: 12px; right: 12px; bottom: 12px; z-index: 1; color: #fff; font-size: 12px; font-weight: 600; letter-spacing: .03em; text-align: center; }
+
+    /* cards */
+    .card {
+      position: relative;
+      background: linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(255,252,248,.98) 100%);
+      border: 1px solid var(--line-med);
+      border-radius: var(--radius-lg);
+      padding: 30px 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .card::before {
+      content: ''; position: absolute; inset: 0 auto auto 0; width: 100%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(191,118,88,.22), transparent);
+      pointer-events: none;
+    }
+    .kicker { display: inline-flex; align-items: center; gap: 8px; font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--rose); margin-bottom: 10px; }
+    .section-title { font-size: clamp(28px, 5vw, 40px); margin-bottom: 10px; font-weight: 400; }
+    .section-desc { color: var(--muted); font-size: 15px; line-height: 1.8; font-weight: 300; }
+
+    /* itinerary */
+    .days { display: grid; gap: 14px; margin-top: 22px; }
+    .day { background: rgba(255,255,255,.96); border: 1px solid var(--line-med); border-radius: 26px; overflow: hidden; box-shadow: var(--shadow); transition: transform .22s ease, box-shadow .22s ease; }
+    .day:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .day-img { width: 100%; height: 280px; object-fit: cover; object-position: center center; }
+    .day-body { padding: 22px; text-align: center; }
+    .day-num { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px; font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--rose); }
+    .day-num::after { content: ''; flex: 1; height: 1px; background: rgba(191,118,88,.24); max-width: 60px; }
+    .day-num::before { content: ''; flex: 1; height: 1px; background: rgba(191,118,88,.24); max-width: 60px; }
+    .day-title { font-size: 26px; font-weight: 400; margin-bottom: 10px; }
+    .day-desc { color: var(--muted); font-size: 14px; line-height: 1.8; font-weight: 300; }
+    .day-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 15px; }
+    .tag { padding: 6px 12px; border-radius: 999px; background: var(--rose-soft); color: var(--rose-dark); font-size: 11px; font-weight: 600; letter-spacing: .02em; }
+
+    /* pricing */
+    .price-card { background: linear-gradient(145deg, #fff8f3 0%, #fffdfa 62%, #fef7f1 100%); border: 1.5px solid rgba(191,118,88,.18); }
+    .price-card::after { content: ''; position: absolute; width: 240px; height: 240px; border-radius: 50%; right: -80px; top: -80px; background: radial-gradient(circle, rgba(191,118,88,.12) 0%, transparent 70%); pointer-events: none; }
+    .price-badge { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 999px; background: var(--gold-soft); color: var(--gold); border: 1px solid rgba(198,161,79,.24); font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 14px; justify-content: center; margin-left: auto; margin-right: auto; }
+    .price-big { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: center; gap: 10px; margin: 8px 0 18px; }
+    .price-num { font-family: 'DM Serif Display', serif; font-size: clamp(48px, 8vw, 64px); line-height: 1; }
+    .price-per { font-size: 13px; color: var(--muted); line-height: 1.5; padding-bottom: 8px; font-weight: 300; }
+    .tax-note { font-size: 12px; color: var(--faint); margin-bottom: 20px; text-align: center; }
+    .includes { list-style: none; display: grid; gap: 9px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .includes li { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border-radius: 16px; background: #fff; border: 1px solid var(--line); font-size: 14px; color: var(--ink); text-align: left; }
+    .includes .ico { font-size: 18px; line-height: 1; flex-shrink: 0; margin-top: 1px; }
+    .excludes { margin-top: 14px; padding: 14px 16px; border-radius: 16px; background: var(--paper-2); border: 1px solid var(--line); font-size: 13px; color: var(--muted); line-height: 1.7; font-weight: 300; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+    /* form */
+    .form-section { background: linear-gradient(145deg, #fff8f3 0%, #fffdfa 100%); border: 1.5px solid rgba(191,118,88,.18); }
+    .form-section::after { content: ''; position: absolute; inset: 0 0 auto 0; height: 4px; background: linear-gradient(90deg, var(--rose), var(--gold), var(--rose)); }
+    .zoho-wrap { width: 100%; overflow: hidden; border-radius: 22px; border: 1px solid rgba(25,22,19,.08); background: #fff; box-shadow: 0 18px 40px rgba(15,12,9,.08); }
+    .zoho-wrap iframe { display: block; width: 100%; min-width: 100%; border: none; height: 980px; background: #fff; }
+
+    /* footer */
+    footer { padding: 26px 0 52px; text-align: center; }
+    .footer-brand { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; }
+    .footer-byline { margin-top: 16px; font-size: 11px; color: var(--faint); letter-spacing: .03em; }
+
+    /* reveal */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* pack grid */
+    .pack-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line-med); border-radius: 16px; overflow: hidden; margin-bottom: 60px; }
+    .pack-card { padding: 36px 32px; border-right: 1px solid var(--line-med); border-bottom: 1px solid var(--line-med); background: #fff; transition: background .2s ease; }
+    .pack-card:hover { background: #fdf9f6; }
+    .pack-card:nth-child(3n) { border-right: none; }
+    .pack-card:nth-child(n+4) { border-bottom: none; }
+    .pack-card--dark { background: #0f0c09; color: #fff; }
+    .pack-card--dark:hover { background: #1a1410; }
+    .pack-icon { width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(191,118,88,.3); display: flex; align-items: center; justify-content: center; margin-bottom: 28px; color: var(--rose); }
+    .pack-card--dark .pack-icon { border-color: rgba(255,255,255,.15); color: rgba(255,255,255,.6); }
+    .pack-title { font-family: 'DM Serif Display', serif; font-size: 22px; font-weight: 400; letter-spacing: -0.01em; margin-bottom: 12px; color: var(--ink); line-height: 1.2; }
+    .pack-card--dark .pack-title { color: #fff; }
+    .pack-body { font-size: 14px; line-height: 1.75; color: var(--muted); font-weight: 300; }
+    .pack-card--dark .pack-body { color: rgba(255,255,255,.5); }
+
+    /* timeline */
+    .timeline-wrap { position: relative; padding-bottom: 80px; }
+    .timeline-line { position: absolute; top: 22px; left: calc(100% / 8); right: calc(100% / 8); height: 1px; background: rgba(191,118,88,.35); z-index: 0; }
+    .timeline-steps { display: grid; grid-template-columns: repeat(4, 1fr); position: relative; z-index: 1; }
+    .timeline-step { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 24px; }
+    .tl-dot { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(191,118,88,.3); background: #f7f1ea; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 400; color: var(--rose); margin-bottom: 28px; position: relative; z-index: 1; flex-shrink: 0; }
+    .tl-title { font-family: 'DM Serif Display', serif; font-size: 20px; font-weight: 400; color: var(--ink); margin-bottom: 10px; letter-spacing: -0.01em; }
+    .tl-desc { font-size: 13px; line-height: 1.75; color: var(--muted); font-weight: 300; max-width: 22ch; }
+    .mobile-steps { display: none; }
+
+    /* host section */
+    .host-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; padding-bottom: 70px; }
+    .host-photo-col { position: relative; }
+    .host-ig-badge { position: absolute; left: 350px; bottom: -20px; display: block; background: #111009; color: #fff; padding: 18px 24px; border-radius: 14px; text-decoration: none; box-shadow: 0 18px 50px rgba(0,0,0,.25); min-width: 210px; }
+    .host-text-col { padding: 10px 0; }
+
+    /* responsive */
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 20px, var(--max)); }
+      .card { padding: 24px 18px; border-radius: 24px; }
+      .photo-strip { display: flex; gap: 12px; overflow-x: auto; overflow-y: hidden; padding-bottom: 4px; scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x mandatory; }
+      .photo-strip::-webkit-scrollbar { display: none; }
+      .strip-photo { flex: 0 0 72%; scroll-snap-align: start; }
+      .day { display: block; }
+      .day-img { height: 220px; }
+      .hero-content { padding: 26px 0 40px; }
+      .sticky-bar { left: 10px; right: 10px; bottom: 10px; padding: 12px 12px; gap: 10px; }
+      .sticky-price { font-size: 20px; }
+      .sticky-btn { padding: 12px 16px; font-size: 13px; }
+      .zoho-wrap iframe { height: 1120px; }
+      .pack-grid { grid-template-columns: 1fr 1fr; }
+      .pack-card:nth-child(3n) { border-right: 1px solid var(--line-med); }
+      .pack-card:nth-child(2n) { border-right: none; }
+      .pack-card:nth-child(n+4) { border-bottom: 1px solid var(--line-med); }
+      .pack-card:nth-child(n+5) { border-bottom: none; }
+      .pack-card { padding: 24px 20px; }
+      .pack-title { font-size: 18px; }
+      .host-grid { grid-template-columns: 1fr; gap: 30px; }
+      .host-ig-badge { left: 0; bottom: 20px; }
+      .hero-content .wrap { display: flex; flex-direction: column; justify-content: flex-end; min-height: 100svh; padding-bottom: 80px; gap: 20px; }
+      .hero-right-block { position: static; width: 100%; align-items: flex-start; }
+      .hero-right-block .hero-glass { width: 100%; max-width: 100%; }
+      .hero-right-block .hero-stats { grid-template-columns: repeat(2, 1fr); }
+      .hero-right-block .h-stat { padding: 10px 12px; }
+      .hero-right-block { order: 1; }
+      .hero-copy { order: 2; max-width: 100% !important; text-align: left; }
+      .hero-right-block .urgency { align-self: center; }
+      .hero h1 { font-size: clamp(40px, 11vw, 72px); }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .btn-primary { width: 100%; text-align: center; }
+      .hero-sub-note { text-align: center; }
+    }
+    @media (max-width: 640px) {
+      .timeline-wrap { display: none; }
+      .mobile-steps { display: flex; flex-direction: column; padding-bottom: 60px; }
+      .mobile-step { display: flex; gap: 20px; align-items: flex-start; }
+      .mobile-step-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+      .mobile-connector { width: 1px; flex: 1; min-height: 40px; background: rgba(191,118,88,.3); margin: 6px 0; }
+      .mobile-step-body { padding-top: 10px; padding-bottom: 32px; }
+      .mobile-step--last .mobile-step-body { padding-bottom: 0; }
+      .mobile-steps .tl-dot { margin-bottom: 0; }
+      .mobile-steps .tl-title { font-size: 18px; margin-bottom: 6px; }
+      .mobile-steps .tl-desc { max-width: none; font-size: 14px; }
+    }
+    @media (max-width: 520px) {
+      .hero h1 { max-width: 7ch; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .h-stat { padding: 12px; }
+      .strip-photo { flex: 0 0 82%; }
+      .btn-primary { width: 100%; }
+      .hero-actions { align-items: stretch; }
+      .sticky-bar { align-items: center; }
+      .sticky-note { font-size: 11px; }
+      .zoho-wrap iframe { height: 1200px; }
+    }
+    @media (max-width: 480px) {
+      .pack-grid { grid-template-columns: 1fr; }
+      .pack-card { border-right: none !important; border-bottom: 1px solid var(--line-med) !important; }
+      .pack-card:last-child { border-bottom: none !important; }
+    }
+    @media (max-width: 400px) {
+      .hero-right-block .h-stat span { font-size: 13px; }
+      .hero-right-block .h-stat strong { font-size: 9px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="sticky-bar" id="stickyCta">
+    <div class="sticky-left">
+      <div class="sticky-price">₹3,15,999</div>
+      <div class="sticky-note">Per person | Twin sharing</div>
+    </div>
+    <a href="#apply" class="sticky-btn">Book my spot</a>
+  </div>
+
+  <header class="hero" id="heroTop">
+    <div class="hero-media"></div>
+    <div class="hero-content">
+      <div class="wrap">
+
+        <div class="hero-right-block">
+          <div class="hero-glass">
+            <div class="hero-stats">
+              <div class="h-stat">
+                <strong>Duration</strong>
+                <span>12 Nights | 13 Days</span>
+              </div>
+              <div class="h-stat">
+                <strong>Countries</strong>
+                <span>France · Netherlands · Germany · Switzerland · Austria · Italy</span>
+              </div>
+              <div class="h-stat">
+                <strong>Departs</strong>
+                <span>May–June 2026</span>
+              </div>
+              <div class="h-stat">
+                <strong>Price</strong>
+                <span>₹3.15L</span>
+              </div>
+            </div>
+          </div>
+          <div class="urgency" style="margin:0;">
+            <span class="urgency-dot"></span>
+            Limited seats | May 2026 departure opens
+          </div>
+        </div>
+
+        <div class="hero-copy" style="max-width:560px;">
+          <span class="eyebrow">European Marvels</span>
+          <h1>Europe With <em>Swabhi.</em></h1>
+          <p class="hero-lead">13 days. 6 countries. 8 cities. The Eiffel Tower to the Colosseum, curated and lived in person with someone who turns every city into a visual story worth telling.</p>
+          <div class="hero-actions">
+            <a href="#apply" class="btn-primary">I want in</a>
+            <div class="hero-sub-note">Your next reel starts here.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <div class="strip-wrap">
+    <div class="wrap">
+      <div class="photo-strip">
+        <div class="strip-photo">
+          <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?fm=jpg&fit=crop&w=700&q=80" alt="Paris" loading="lazy">
+          <span class="strip-label">Paris</span>
+        </div>
+        <div class="strip-photo">
+          <img src="https://canalsofamsterdam.com/wp-content/uploads/2022/07/Canals-of-Amsterdam-scaled.jpg" alt="Amsterdam" loading="lazy">
+          <span class="strip-label">Amsterdam</span>
+        </div>
+        <div class="strip-photo">
+          <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?fm=jpg&fit=crop&w=700&q=80" alt="Germany" loading="lazy">
+          <span class="strip-label">Germany</span>
+        </div>
+        <div class="strip-photo">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?fm=jpg&fit=crop&w=700&q=80" alt="Switzerland" loading="lazy">
+          <span class="strip-label">Switzerland</span>
+        </div>
+        <div class="strip-photo">
+          <img src="https://www.chaletzeit.com/wp-content/uploads/2021/04/innsbruck-stadt-oesterreich.jpg" alt="Austria" loading="lazy">
+          <span class="strip-label">Innsbruck</span>
+        </div>
+        <div class="strip-photo">
+          <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?fm=jpg&fit=crop&w=700&q=80" alt="Rome" loading="lazy">
+          <span class="strip-label">Rome</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="section reveal" id="meet-swabhi">
+    <div class="wrap">
+      <div style="padding: 50px 0 40px;">
+        <div style="display:flex; align-items:center; gap:14px; margin-bottom:16px;">
+          <span style="font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--rose);">Your Trip Host</span>
+        </div>
+        <h2 style="font-family:'DM Serif Display',serif; font-size:clamp(38px,5.5vw,60px); font-weight:400; line-height:1.1; letter-spacing:-0.02em; color:var(--ink);">
+          Travel with someone<br>who makes the <em style="font-style:italic; color:var(--rose);">whole thing fun</em>
+        </h2>
+      </div>
+
+      <div class="host-grid">
+        <div class="host-photo-col">
+          <div style="aspect-ratio:3/4; border-radius:24px; overflow:hidden; background:#e8ddd4; box-shadow:var(--shadow-lg); position:relative;">
+            <img src="swabhi.webp" alt="Swabhiman Ball" style="width:100%; height:100%; object-fit:cover; object-position:center top; display:block;">
+          </div>
+          <a href="https://www.instagram.com/mr.swabhi?igsh=NHpyaGppd2hyYzN2" target="_blank" rel="noopener" class="host-ig-badge">
+            <div style="font-family:'DM Serif Display',serif; font-size:20px; color:#c9a55a; margin-bottom:5px;">@mr.swabhi</div>
+            <div style="font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.45);">Follow on Instagram</div>
+          </a>
+        </div>
+
+        <div class="host-text-col">
+          <p style="font-size:16px; line-height:1.9; color:var(--ink); margin-bottom:22px; font-weight:300;">
+            Hi, I'm <strong style="font-weight:700;">Swabhi</strong>. Born and raised with roots in Deoghar, Jharkhand, and now building something very real from Kolkata. Fashion, travel, lifestyle and the kind of content that comes from genuinely loving all three. Over 309K people follow what I wear and where I go. This time, I want us to go somewhere together.
+          </p>
+
+          <p style="font-size:16px; line-height:1.9; color:var(--ink); margin-bottom:28px; font-weight:300;">
+            13 days across six countries. Paris for the architecture and the light that makes every frame look intentional, Amsterdam for canals that reflect the whole sky, Germany for old towns that feel untouched, Switzerland for mountains you genuinely cannot believe are real, Innsbruck tucked into the Alps, Tuscany rolling past your window, and then Rome. Every single day has a shot worth stopping for.
+          </p>
+
+          <a href="https://www.instagram.com/mr.swabhi?igsh=NHpyaGppd2hyYzN2" target="_blank" rel="noopener"
+            style="display:inline-flex; align-items:center; gap:8px; color:var(--rose); font-size:14px; font-weight:600; text-decoration:none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+            @mr.swabhi on Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <section class="section reveal">
+      <div class="wrap">
+        <div class="text-wrap">
+          <span class="kicker" style="display:flex;justify-content:center;">The itinerary</span>
+          <h2 class="section-title" style="text-align:center;">13 days, city by city.</h2>
+          <p class="section-desc" style="text-align:center;margin-bottom:0;">
+            6 countries, 8 cities, zero guesswork. Every day is planned so you get the real version of Europe not the rushed, tick-the-box version.
+          </p>
+        </div>
+
+        <div class="days">
+
+          <!-- Day 01 -->
+          <div class="day">
+            <img class="day-img" src="https://canalsofamsterdam.com/wp-content/uploads/2022/07/Canals-of-Amsterdam-scaled.jpg" alt="Amsterdam" loading="lazy">
+            <div class="day-body">
+              <div class="day-num">Day 01</div>
+              <div class="day-title">Arrive in Amsterdam</div>
+              <p class="day-desc">Land at Schiphol, check in, and let Amsterdam start doing its thing. Canal reflections, houseboats, the smell of stroopwafels still warm from the cart. The city begins working on you the moment you step outside. Meet the group, get settled, and take in your first proper European evening. The camera comes out before you even reach the hotel. Obviously.</p>
+              <div class="day-tags">
+                <span class="tag">Arrival</span>
+                <span class="tag">Hotel check in</span>
+                <span class="tag">Group meetup</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 02 -->
+          <div class="day">
+            <img class="day-img" src="https://images.unsplash.com/photo-1583416750470-965b2707b355?fm=jpg&fit=crop&w=1200&q=80" alt="Zaanse Schans" loading="lazy">
+            <div class="day-body">
+              <div class="day-num">Day 02</div>
+              <div class="day-title">Amsterdam city tour and Zaanse Schans</div>
+              <p class="day-desc">Dam Square, the Anne Frank House exterior, the Royal Palace. Amsterdam's most iconic spots with a guide who actually knows the stories behind them. Then out to Zaanse Schans where real windmills still turn, a working cheese farm sits roadside, and wooden clogs are being made in real time in front of you. Back to Amsterdam for a canal cruise at dusk. The kind of day that fills an entire camera roll before dinner happens.</p>
+              <div class="day-tags">
+                <span class="tag">Zaanse Schans</span>
+                <span class="tag">Canal cruise</span>
+                <span class="tag">Dutch culture</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 03 -->
+          <div class="day">
+            <img class="day-img" src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?fm=jpg&fit=crop&w=1200&q=80" alt="Paris" loading="lazy">
+            <div class="day-body">
+              <div class="day-num">Day 03</div>
+              <div class="day-title">Amsterdam to Paris</div>
+              <p class="day-desc">Travel to Paris. There is a specific moment you step out of the hotel and the light is somehow different, the architecture somehow better, the streets more photogenic than any city you have walked before. That moment hits everyone, every single time. Evening free to wander, eat, and take it all in slowly. Your first Paris night. Nothing needs to be planned for it to be perfect.</p>
+              <div class="day-tags">
+                <span class="tag">Paris arrival</span>
+                <span class="tag">Hotel check in</span>
+                <span class="tag">Free evening</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 04 -->
+          <div class="day">
+            <img class="day-img" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?fm=jpg&fit=crop&w=1200&q=80" alt="Paris Highlights" loading="lazy">
+            <div class="day-body">
+              <div class="day-num">Day 04</div>
+              <div class="day-title">Paris highlights</div>
+              <p class="day-desc">Place Vendome, Opera Garnier, Champs Elysees, Arc de Triomphe. The full guided Paris edit in one day. Then up to the second floor of the Eiffel Tower for views that genuinely justify the whole trip. Followed by a Seine cruise at golden hour. If you are going to form opinions about Paris, today is when they happen. They will be very strong, very good opinions.</p>
+              <div class="day-tags">
+                <span class="tag">Eiffel Tower</span>
+                <span class="tag">Seine cruise</span>
+                <span class="tag">City tour</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 05 -->
+          <div class="day">
+            <img class="day-img" src="https://images.unsplash.com/photo-1543906965-f9520aa2ed8a?fm=jpg&fit=crop&w=1200&q=80" alt="Paris Day 2" loading="lazy">
+            <div class="day-body">
+              <div class="day-num">Day 05</div>
+              <div class="day-title">Paris day two</div>
+              <p class="day-desc">More Paris. The Louvre, Montmartre, the little streets behind the streets, patisserie windows that deserve their own dedicated reel. Three nights here means you actually get to know the city rather than just skim it. Today is the day you find your favourite corner, your favourite cafe, your one view that makes you quietly decide you want to come back. Everyone finds something different.</p>
+              <div class="day-tags">
+                <span class="tag">Louvre</span>
+                <span class="tag">Montmartre</span>
+                <span class="tag">Free time</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 06 -->
+          <div class="day">
+            <img class="day-img" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?fm=jpg&fit=crop&w=1200&q=80" alt="Germany" loading="lazy">
+            <div class="day-body">
+              <div class="day-num">Day 06</div>
+              <div class="day-title">Paris to Germany</div>
+              <p class="day-desc">Travel to Germany. Half-timbered houses, cobblestone streets, a riverfront glowing at golden hour. The kind of place that looks exactly like a period film and turns out to be just a regular Tuesday afternoon. Germany is consistently underestimated on European itineraries. After today, it will not be underestimated by anyone in this group.</p>
+              <div class="day-tags">
+                <span class="tag">Germany</span>
+                <span class="tag">Old town</span>
+                <span class="tag">Hotel check in</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 07 -->
+          <div class="day">
+            <img class="day-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?fm=jpg&fit=crop&w=1200&q=80" alt="Mt Titlis Switzerland" loading="lazy">
+            <div class="day-body">
+              <div class="day-num">Day 07</div>
+              <div class="day-title">Germany to Switzerland, Mt. Titlis</div>
+              <p class="day-desc">Into Switzerland, then straight up to Mt. Titlis. Snow, in the middle of summer. The revolving cable car, a glacier cave at 3,020 metres, views that stop you mid-sentence. Nobody is too cool for Mt. Titlis. Everyone up there is just standing still, taking the same photo from ten different angles, and not feeling the slightest bit embarrassed about it.</p>
+              <div class="day-tags">
+                <span class="tag">Mt. Titlis</span>
+                <span class="tag">Snow experience</span>
+                <span class="tag">Cable car</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 08 -->
+          <div class="day">
+            <img class="day-img" src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?fm=jpg&fit=crop&w=1200&q=80" alt="Lucerne Switzerland" loading="lazy">
+            <div class="day-body">
+              <div class="day-num">Day 08</div>
+              <div class="day-title">Switzerland sightseeing, Lucerne</div>
+              <p class="day-desc">Lucerne's old town, the Chapel Bridge over glassy water, Lake Lucerne opening up ahead of you. Switzerland simply decides to be unreasonably beautiful and just keeps going. The backdrop here makes everything you wear look good. Full day to explore, shoot, and eat Swiss chocolate that costs more than it probably should but is completely worth every franc.</p>
+              <div class="day-tags">
+                <span class="tag">Lucerne</span>
+                <span class="tag">Chapel Bridge</span>
+                <span class="tag">Lake views</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 09 -->
+          <div class="day">
+            <img class="day-img" src="https://www.chaletzeit.com/wp-content/uploads/2021/04/innsbruck-stadt-oesterreich.jpg" alt="Innsbruck Austria" loading="lazy">
+            <div class="day-body">
+              <div class="day-num">Day 09</div>
+              <div class="day-title">Switzerland to Innsbruck</div>
+              <p class="day-desc">Travel to Innsbruck, Austria. A city with the Alps as its literal backdrop in every single direction you look. The Golden Roof, the Baroque old town, the Maria Theresien Strasse laid out beautifully ahead of you. The kind of city that genuinely surprises you because it was not on your radar and then quietly becomes one of your favourites. Happens every time with this stop.</p>
+              <div class="day-tags">
+                <span class="tag">Innsbruck</span>
+                <span class="tag">Golden Roof</span>
+                <span class="tag">Alpine backdrop</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 10 -->
+          <div class="day">
+            <img class="day-img" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?fm=jpg&fit=crop&w=1200&q=80" alt="Padova Italy" loading="lazy">
+            <div class="day-body">
+              <div class="day-num">Day 10</div>
+              <div class="day-title">Innsbruck to Padova</div>
+              <p class="day-desc">Cross into Italy and arrive in Padova, home to one of Europe's oldest universities, arcaded walkways designed for slow walks and great outfits, and piazzas where the whole city seems to come out together in the evening. The gelato situation improves immediately at the Italian border. This is not an opinion. It is a fact confirmed by every traveller who has made this exact crossing.</p>
+              <div class="day-tags">
+                <span class="tag">Padova</span>
+                <span class="tag">Italy arrival</span>
+                <span class="tag">Piazzas</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 11 -->
+          <div class="day">
+            <img class="day-img" src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?fm=jpg&fit=crop&w=1200&q=80" alt="Tuscany" loading="lazy">
+            <div class="day-body">
+              <div class="day-num">Day 11</div>
+              <div class="day-title">Padova to Tuscany</div>
+              <p class="day-desc">Through the Italian countryside to Tuscany. Rolling hills, rows of cypress trees, vineyards and olive groves doing exactly what they do in every Italian film you have ever loved. The light turns golden in the afternoon and the whole landscape looks like someone applied a perfect filter. Tuscany is the filter. Florence is nearby. Everything smells like warm bread and good olive oil.</p>
+              <div class="day-tags">
+                <span class="tag">Tuscany</span>
+                <span class="tag">Countryside</span>
+                <span class="tag">Florence nearby</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 12 -->
+          <div class="day">
+            <img class="day-img" src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?fm=jpg&fit=crop&w=1200&q=80" alt="Rome Colosseum" loading="lazy">
+            <div class="day-body">
+              <div class="day-num">Day 12</div>
+              <div class="day-title">Tuscany to Rome</div>
+              <p class="day-desc">Travel to Rome. The Colosseum, the Trevi Fountain, the Vatican. Everything you have kept on your mood board for years, now right in front of you at full scale. Nothing prepares you for how large the Colosseum actually is. Or how loud the crowd around the Trevi Fountain gets. Or how good Roman pasta tastes at 10pm in a side street. Final group dinner in the Eternal City. A dinner that makes the whole trip.</p>
+              <div class="day-tags">
+                <span class="tag">Rome</span>
+                <span class="tag">Colosseum</span>
+                <span class="tag">Trevi Fountain</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 13 -->
+          <div class="day">
+            <img class="day-img" src="https://images.unsplash.com/photo-1550340499-a6c60fc8287c?fm=jpg&fit=crop&w=1200&q=80" alt="Departure" loading="lazy">
+            <div class="day-body">
+              <div class="day-num">Day 13</div>
+              <div class="day-title">Fly home from Rome</div>
+              <p class="day-desc">Last breakfast in Rome. Check out. Airport. You board the flight home with more content than you know what to do with, a notes app overflowing with cafe names, and a quiet but firm argument forming in your head for why 13 days was not quite enough. It never is. That is the whole point.</p>
+              <div class="day-tags">
+                <span class="tag">Departure</span>
+                <span class="tag">Last breakfast</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="wrap">
+        <div class="card price-card text-wrap">
+          <span class="kicker" style="display:flex;justify-content:center;">Pricing</span>
+          <div class="price-badge">Everything included</div>
+          <p style="font-size:13px;color:var(--muted);font-weight:300;text-align:center;">One number. No fine print. No nasty surprises later.</p>
+
+          <div class="price-big">
+            <div class="price-num">₹3,15,999</div>
+            <div class="price-per">per adult<br>twin sharing</div>
+          </div>
+
+          <p class="tax-note">GST and TCS at actuals</p>
+
+          <ul class="includes">
+            <li><span class="ico">✈️</span><span>Return economy airfare from Mumbai, Delhi, Hyderabad and Bangalore</span></li>
+            <li><span class="ico">🏨</span><span>4 star hotel stay throughout 8 cities, every night sorted</span></li>
+            <li><span class="ico">🍽️</span><span>Daily breakfast and Indian dinners with Jain, Veg and Non Veg options</span></li>
+            <li><span class="ico">🗺️</span><span>Schengen visa charges fully included</span></li>
+            <li><span class="ico">🚌</span><span>AC coach transfers and all sightseeing across all 6 countries</span></li>
+            <li><span class="ico">👤</span><span>Professional tour manager with the group throughout</span></li>
+          </ul>
+
+          <div class="excludes">
+            <strong>Not included:</strong> GST and TCS at actuals | Driver tips | Personal expenses | Optional upgrades
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="wrap">
+        <div style="padding: 60px 0 40px;">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+            <span style="font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--rose);">Everything Handled</span>
+          </div>
+          <h2 style="font-family:'DM Serif Display',serif; font-size:clamp(36px,6vw,62px); font-weight:400; line-height:1.08; letter-spacing:-0.02em; color:var(--ink);">
+            You just <em style="font-family:'DM Serif Display',serif; font-style:italic; color:var(--rose);">pack your bags</em>
+          </h2>
+        </div>
+
+        <div class="pack-grid">
+          <div class="pack-card">
+            <div class="pack-icon">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4">
+                <rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
+              </svg>
+            </div>
+            <div class="pack-title">Flights and Visa</div>
+            <div class="pack-body">Return economy airfare from 4 Indian cities. Schengen visa documentation fully guided, no research rabbit holes required from your end.</div>
+          </div>
+          <div class="pack-card">
+            <div class="pack-icon">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" /><polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </div>
+            <div class="pack-title">4-Star Hotels</div>
+            <div class="pack-body">Comfortable, well-located hotels every night across all 8 cities. Breakfast every morning. You wake up ready to go.</div>
+          </div>
+          <div class="pack-card">
+            <div class="pack-icon">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4">
+                <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <div class="pack-title">Tour Manager</div>
+            <div class="pack-body">A dedicated professional tour manager with the group from departure to landing, answering questions before you even think to ask them.</div>
+          </div>
+          <div class="pack-card">
+            <div class="pack-icon">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <div class="pack-title">All Sightseeing</div>
+            <div class="pack-body">Every transfer, entrance ticket, and guided experience across 6 countries. Nothing to book separately, nothing to forget.</div>
+          </div>
+          <div class="pack-card">
+            <div class="pack-icon">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+              </svg>
+            </div>
+            <div class="pack-title">24/7 Support</div>
+            <div class="pack-body">Akbar Holidays' team is reachable before and throughout the trip. Something feels off? Someone picks up.</div>
+          </div>
+          <div class="pack-card">
+            <div class="pack-icon">
+              <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.4">
+                <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
+              </svg>
+            </div>
+            <div class="pack-title">Travel with Swabhi</div>
+            <div class="pack-body">Not a highlight reel. Swabhi is there in person, shooting, exploring, and finding the most interesting corner of every single city.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="wrap">
+        <div style="padding: 0px 0 40px;">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+            <span style="font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--rose);">How It Works</span>
+          </div>
+          <h2 style="font-family:'DM Serif Display',serif; font-size:clamp(36px,6vw,62px); font-weight:400; line-height:1.08; letter-spacing:-0.02em; color:var(--ink);">
+            Four simple <em style="font-style:italic; color:var(--rose);">steps</em>
+          </h2>
+        </div>
+
+        <div class="timeline-wrap">
+          <div class="timeline-line"></div>
+          <div class="timeline-steps">
+            <div class="timeline-step">
+              <div class="tl-dot">1</div>
+              <div class="tl-title">Fill the Form</div>
+              <div class="tl-desc">Submit your interest below with your details and travel city</div>
+            </div>
+            <div class="timeline-step">
+              <div class="tl-dot">2</div>
+              <div class="tl-title">Get a Call Back</div>
+              <div class="tl-desc">Akbar Holidays will reach out to share full details and confirm your seat</div>
+            </div>
+            <div class="timeline-step">
+              <div class="tl-dot">3</div>
+              <div class="tl-title">Book and Prep</div>
+              <div class="tl-desc">Complete your booking, visa docs sorted, you start packing</div>
+            </div>
+            <div class="timeline-step">
+              <div class="tl-dot">4</div>
+              <div class="tl-title">Fly with Swabhi</div>
+              <div class="tl-desc">Depart with the group and experience Europe together</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-steps">
+          <div class="mobile-step">
+            <div class="mobile-step-left"><div class="tl-dot">1</div><div class="mobile-connector"></div></div>
+            <div class="mobile-step-body"><div class="tl-title">Fill the Form</div><div class="tl-desc">Submit your interest below with your details and travel city</div></div>
+          </div>
+          <div class="mobile-step">
+            <div class="mobile-step-left"><div class="tl-dot">2</div><div class="mobile-connector"></div></div>
+            <div class="mobile-step-body"><div class="tl-title">Get a Call Back</div><div class="tl-desc">Akbar Holidays will reach out to share full details and confirm your seat</div></div>
+          </div>
+          <div class="mobile-step">
+            <div class="mobile-step-left"><div class="tl-dot">3</div><div class="mobile-connector"></div></div>
+            <div class="mobile-step-body"><div class="tl-title">Book and Prep</div><div class="tl-desc">Complete your booking, visa docs sorted, you start packing</div></div>
+          </div>
+          <div class="mobile-step mobile-step--last">
+            <div class="mobile-step-left"><div class="tl-dot">4</div></div>
+            <div class="mobile-step-body"><div class="tl-title">Fly with Swabhi</div><div class="tl-desc">Depart with the group and experience Europe together</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="apply">
+      <div class="wrap">
+        <div class="card form-section text-wrap">
+          <span class="kicker" style="display:flex;justify-content:center;">Apply now</span>
+          <div class="zoho-wrap">
+            <iframe aria-label='Want in on European Marvels with Mr. Swabhi?' frameborder="0" style="height:500px;width:99%;border:none;" src='https://forms.zohopublic.in/melangedigital1/form/WantinonEuropeanMarvelswithMrSwabhi/formperma/GCzXL2nbDf9cxjpoTS47GeVLVkJH_giuAi6PSubIYUA'></iframe>
+            <p style="font-size:12px;color:var(--faint);text-align:center;margin-top:14px;line-height:1.7;">
+              We will respond within 24 hours. Your booking amount is only requested after your spot is confirmed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="margin-bottom: 5%">
+    <div class="wrap">
+      <div class="footer-brand">European Marvels with Swabhi</div>
+      <div class="footer-byline">Tour logistics by Akbar Holidays Pvt. Ltd. | Managed by Mélange Digital</div>
+    </div>
+  </footer>
+
+  <script>
+    const heroTop = document.getElementById('heroTop');
+    const stickyCta = document.getElementById('stickyCta');
+    const stickyObs = new IntersectionObserver(([entry]) => {
+      stickyCta.classList.toggle('visible', !entry.isIntersecting);
+    }, { threshold: 0.08 });
+    stickyObs.observe(heroTop);
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('in'); revealObs.unobserve(entry.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => revealObs.observe(el));
+  </script>
+</body>
+</html>
